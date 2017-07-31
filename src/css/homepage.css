@@ -1,0 +1,49 @@
+html,body{
+		height: 100%;
+	}
+	
+	.template{
+		height: 100%;
+	}
+	
+
+	
+	.content{
+		display: flex;
+		height: 90%;
+	}
+	
+	.content aside{
+		flex:0 0 200px;
+		height: 100%;
+	}
+	
+	.content aside .el-row{
+		height: 100%;
+	}
+	
+	.content aside .el-col{
+		height: 100%;
+	}
+	
+	.content aside .el-menu{
+		height: 100%;
+	}
+	
+	.content section{
+		padding: 20px;
+		flex:1;
+	}
+	
+	.content section .el-input{
+		width:200px;
+	}
+	
+	.content section h2{
+		height: 30px;
+		font-weight: bold;
+	}
+	
+	.content section .table{
+		margin-top:20px;
+	}
