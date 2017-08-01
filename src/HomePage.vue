@@ -68,7 +68,7 @@ import './css/homepage.css'
 	  					label:'我的桌面',
 	  					href:'',
 	  					closable:false,
-	  					cmp:''
+	  					cmp:'Table1'
 	  				}
 	  			]
 	  		}
@@ -83,13 +83,13 @@ import './css/homepage.css'
 	  					return;
 	  				}
 	  			}
-	  			
+	  			console.log(obj.componentData.componentName);
 	  			this.tabsData.push(
 	  				{
 	  					label:obj.name,
 	  					href:'',
 	  					closable:true,
-	  					cmp:''
+	  					cmp:obj.componentData.componentName
 	  				}
 	  			)
 	  			this.tabsSelect =this.tabsData.length-1+'';

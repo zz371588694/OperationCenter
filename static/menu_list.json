@@ -20,14 +20,14 @@
 			{
 				"name":"摄像机信息",
 				"componentData":{
-					"componentName":"Table1",
+					"componentName":"Table2",
 					"getUrl":""
 				}
 			},
 			{
 				"name":"视频管理",
 				"componentData":{
-					"componentName":"Table1",
+					"componentName":"Table3",
 					"getUrl":""
 				}
 			}
