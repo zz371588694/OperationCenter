@@ -48,9 +48,9 @@ import './css/homepage.css'
 	    	Container:container
 	  	},
 	  	created(){
-	  		this.$axios.get('/static/menu_list.json')
+	  		this.$axios.get('/api/menuList')
 	  		.then((response)=>{
-	  			this.menuData = response.data;
+	  			this.menuData = response.data.data;
 	  		})
 	  		.catch((error)=>{
 	  			this.$alert('请求失败','错误信息',{

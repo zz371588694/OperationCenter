@@ -6,8 +6,8 @@
 			<el-input placeholder="请输入关键字"></el-input>
 			<label for="">值</label>
 			<el-input placeholder="请输入值"></el-input>
-			<el-button type="info">查询</el-button>
-			<el-button type="info">添加</el-button>
+			<el-button type="primary">查询</el-button>
+			<el-button type="primary">添加</el-button>
 			<el-button type="danger">删除</el-button>
 		</div>
 		<div class="table">

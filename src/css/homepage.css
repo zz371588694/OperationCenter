@@ -9,13 +9,17 @@ html,body{
 
 	
 	.content{
-		display: flex;
-		height: 90%;
+		/*display: flex;*/
+		height: 100%;
+		position: relative;
 	}
 	
 	.content aside{
-		flex:0 0 200px;
+		/*flex:0 0 200px;*/
 		height: 100%;
+		position:absolute;
+		left:0;
+		width:200px;
 	}
 	
 	.content aside .el-row{
@@ -32,7 +36,11 @@ html,body{
 	
 	.content section{
 		padding: 20px;
-		flex:1;
+		/*flex:1;*/
+		position: absolute;
+		left:200px;
+		min-width:1000px;
+		width:85%;
 	}
 	
 	.content section .el-input{
