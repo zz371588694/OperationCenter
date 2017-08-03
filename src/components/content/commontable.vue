@@ -34,17 +34,19 @@
 	 			return ''
 	 		}
 	 	},
+	 	
 	 	created(){
-	 		/*console.log(this.remoteURL);*/
-	 		/*this.$axios.get(this.RemoteURL)
+	 		this.$axios.get(this.remoteURL)
 	 		.then((response)=>{
 	 			console.log(response);
+	 			this.tableHead = response.data.data.TableHead;
+	 			this.tableData = response.data.data.TableData;
 	 		})
 	 		.catch((error)=>{
 	 			this.$alert('请求失败','错误信息',{
 	  				confirmButtonText:'确定'
 	  			})
-	 		})*/
+	 		})
 	 	},
 	    data() {
 	        return {

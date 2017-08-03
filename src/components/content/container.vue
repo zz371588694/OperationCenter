@@ -25,8 +25,7 @@
 			'Table2':table2,
 			'Table3':table3
 		},
-		create(){
-			/*console.log(this.curCmp);*/
+		created(){
 		},
 		data(){
 			return {
