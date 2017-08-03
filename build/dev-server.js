@@ -23,12 +23,19 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 var compiler = webpack(webpackConfig)
 
-var appData = require('../menu_list.json');
 var apiRoutes = express.Router();
+
 apiRoutes.get('/menuList',function(req,res){
 	res.json({
 		errno:0,
-		data:appData
+		data:require('../static/menu_list.json')
+	})
+})
+
+apiRoutes.get('/robotList',function(req,res){
+	res.json({
+		errno:0,
+		data:require('../static/robots.json')
 	})
 })
 

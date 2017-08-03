@@ -1,6 +1,6 @@
 <template>
 	<!--<keep-alive>-->
-		<div :is="item" >
+		<div :is="item"  :remoteURL="remoteURL">
 		</div>
 	<!--</keep-alive>-->
 </template>
@@ -13,8 +13,10 @@
 	export default {
 		props:{
 			curCmp:{
-				type:String,
-				default:''
+				type:Object,
+				default(){
+					return {};
+				}
 			}
 		},
 		components:{
@@ -23,9 +25,13 @@
 			'Table2':table2,
 			'Table3':table3
 		},
+		create(){
+			/*console.log(this.curCmp);*/
+		},
 		data(){
 			return {
-				item:this.curCmp,
+				item:this.curCmp.componentName,
+				remoteURL:this.curCmp.getUrl,
 				tableData: []
 			}
 		}

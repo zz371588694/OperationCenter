@@ -68,7 +68,10 @@ import './css/homepage.css'
 	  					label:'我的桌面',
 	  					href:'',
 	  					closable:false,
-	  					cmp:'Table1'
+	  					cmp:{
+	  						componentName:"Table1",
+							getUrl:""
+	  					}
 	  				}
 	  			]
 	  		}
@@ -83,13 +86,12 @@ import './css/homepage.css'
 	  					return;
 	  				}
 	  			}
-	  			console.log(obj.componentData.componentName);
 	  			this.tabsData.push(
 	  				{
 	  					label:obj.name,
 	  					href:'',
 	  					closable:true,
-	  					cmp:obj.componentData.componentName
+	  					cmp:obj.componentData
 	  				}
 	  			)
 	  			this.tabsSelect =this.tabsData.length-1+'';
@@ -107,7 +109,7 @@ import './css/homepage.css'
   	}
 </script>
 
-<style>
+<style scoped>
 	header{
 		height: 80px;
 		background: #00a1a2;

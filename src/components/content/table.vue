@@ -48,24 +48,15 @@
 <script>
 	import dialog from '../dialog/formdialog'
 	 export default {
-	 	components:{
+	 	/*components:{
 	 		formDialog:dialog
-	 	},
+	 	},*/
 	    data() {
 	        return {
-	        	  	dialogTableVisible: false,
-			        dialogFormVisible: false,
-			        form: {
-			          name: '',
-			          region: '',
-			          date1: '',
-			          date2: '',
-			          delivery: false,
-			          type: [],
-			          resource: '',
-			          desc: ''
-			        },
+	        	  /*	dialogTableVisible: false,
+			        dialogFormVisible: false,*/
 			        formLabelWidth: '120px',
+			          tableHead:[],
 			          tableData: [
 			          	{
 			          		name:'机器人',

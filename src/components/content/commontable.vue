@@ -14,26 +14,6 @@
 			<el-table :data="tableData" border style="width: 100%" stripe>
 				<el-table-column type="selection">
 				</el-table-column>
-				<!--<el-table-column prop="name" label="名称">
-				</el-table-column>
-				<el-table-column label="厂商" prop="producer">
-				</el-table-column>
-				<el-table-column label="轨道长度" prop="tracklength">
-				</el-table-column>
-				<el-table-column label="IP地址" prop="ip" width="120">
-				</el-table-column>
-				<el-table-column label="端口号" prop="port">
-				</el-table-column>
-				<el-table-column label="横向地址" prop="horizontalAddress">
-				</el-table-column>
-				<el-table-column label="纵向地址" prop="verticalAddress">
-				</el-table-column>
-				<el-table-column label="是否可用" prop="enable">
-				</el-table-column>
-				<el-table-column label="状态" prop="status">
-				</el-table-column>
-				<el-table-column label="备注" prop="remark">
-				</el-table-column>-->
 				<el-table-column v-for="head in tableHead" :prop="head.prop" :label="head.label"></el-table-column>
 				<el-table-column label="操作" width="150">
 					<template scope="scope">
@@ -47,30 +27,35 @@
 </template>
 
 <script>
-	import dialog from '../dialog/formdialog'
 	 export default {
-	 	components:{
-	 		formDialog:dialog
+	 	props:{
+	 		remoteURL:String,
+	 		default(){
+	 			return ''
+	 		}
+	 	},
+	 	created(){
+	 		/*console.log(this.remoteURL);*/
+	 		/*this.$axios.get(this.RemoteURL)
+	 		.then((response)=>{
+	 			console.log(response);
+	 		})
+	 		.catch((error)=>{
+	 			this.$alert('请求失败','错误信息',{
+	  				confirmButtonText:'确定'
+	  			})
+	 		})*/
 	 	},
 	    data() {
 	        return {
-			       tableHead:[
-				       	{
-				       		label:'名称',
-				       		prop:'name'
-				       	},
-				       	{
-				       		label:'厂商',
-				       		prop:'producer'
-				       	}
-			       ],
-			        tableData: []
+			       tableHead:[],
+			       tableData: []
 	        }
       }
   	}
 </script>
 
-<style>
+<style scope>
 	.container .el-input{
 		width:200px;
 	}
